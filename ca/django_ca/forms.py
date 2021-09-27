@@ -123,7 +123,7 @@ class CreateCertificateBaseForm(CertificateModelForm):
     subject = forms.CharField(
         label="Subject",
         required=False,
-        help_text='/CN=John Doe/OU=wikiusers/DC=domain/DC=loc',
+        help_text='/CN=John Doe/OU=wikiusers/DC=domain/DC=loc || /C=DE/ST=BW/L=Stuttgart/O=foo/OU=bar/CN=John Doe/emailAddress=john.doe@domain.tld',
         widget=forms.TextInput(attrs={'size': '80'})
     )
     subject_alternative_name = SubjectAltNameField(
