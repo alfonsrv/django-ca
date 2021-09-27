@@ -146,7 +146,7 @@ class SubjectAltNameWidget(CustomMultiWidget):
     """Widget for a Subject Alternative Name extension."""
 
     def __init__(self, attrs: typing.Optional[typing.Dict[str, str]] = None) -> None:
-        _widgets = (widgets.TextInput(), LabeledCheckboxInput(label="Include CommonName"))
+        _widgets = (widgets.TextInput(attrs={'size': '80'}), LabeledCheckboxInput(label="Include CommonName"))
         super().__init__(_widgets, attrs)
 
     def decompress(self, value: typing.Optional[typing.Tuple[str, bool]]) -> typing.Tuple[str, bool]:
